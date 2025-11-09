@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>Phyrexia.ScamDetectorWpf</RootNamespace>
+        <ApplicationIcon>Resources\mtg.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Page Update="src\Xaml\MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Extended.Wpf.Toolkit" Version="5.0.0" />
+      <PackageReference Include="Prism.Wpf" Version="9.0.537" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\mtg.ico" />
+      <Resource Include="Resources\mtg.ico" />
+    </ItemGroup>
+
+</Project>
